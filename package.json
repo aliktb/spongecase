@@ -1,0 +1,23 @@
+{
+  "name": "@aliktb/spongecase",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "spongecase": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliktb/spongecase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aliktb/spongecase/issues"
+  },
+  "homepage": "https://github.com/aliktb/spongecase#readme"
+}
