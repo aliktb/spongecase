@@ -1,4 +1,4 @@
-name: Build
+name: Build and Release
 
 on:
   workflow_dispatch:
@@ -31,3 +31,21 @@ jobs:
       with:
         name: spongecase_${{ matrix.os }}_${{ matrix.arch }}
         path: spongecase_${{ matrix.os }}_${{ matrix.arch }}
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+          path: binaries
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: false
+          files: binaries/*
+          prerelease: ${{ contains(github.ref, '-') }}
