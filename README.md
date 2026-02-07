@@ -55,4 +55,7 @@ mkdir -p ~/.local/bin
 # This will add the local bin directory to the system path
 # for extra info, see https://opensource.com/article/17/6/set-path-linux
 export PATH="~/.local/bin:$PATH"
+
+# Move the binary to the newly created local bin directory
+mv spc ~/.local/bin
 ```
