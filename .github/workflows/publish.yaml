@@ -25,3 +25,9 @@ jobs:
     - name: Build the binary
       run: |
         GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -o spongecase_${{ matrix.os }}_${{ matrix.arch }} main.go
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: spongecase_${{ matrix.os }}_${{ matrix.arch }}
+        path: spongecase_${{ matrix.os }}_${{ matrix.arch }}
