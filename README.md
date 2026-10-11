@@ -14,6 +14,16 @@ spongecase text to convert
 
 ## Installation
 
+### Homebrew
+
+Installation can be performed via Homebrew
+
+```bash
+brew install aliktb/tap/spongecase
+```
+
+### Manual Installation
+
 Simply fetch the binary from the GitHub release, make the binary executable,
 and add it to your path
 
